@@ -11,7 +11,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=True) # lanzar el navegador chrome en modo oculto
     page = browser.new_page()
 
-    #definimos url a scrapar
+    #definimos url a scrapear
     url = "https://charts.youtube.com/charts/TopArtists/co/weekly"
     page.goto(url)
 
@@ -58,5 +58,6 @@ with sync_playwright() as p:
     df_top_artists = pd.DataFrame(top_colombia_weekly)
     #print(df_top_artists.head())
     df_top_artists.to_csv("top_colombia_weekly_artists.csv", index=False)
+
 
     browser.close()  # Cerrar el navegador
