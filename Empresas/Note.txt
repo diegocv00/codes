@@ -1,0 +1,1 @@
+If you have an Power BI acccount or Power BI Desktop you can download "Empresas.pbix" and play around with the year filters.
